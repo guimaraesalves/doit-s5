@@ -1,4 +1,13 @@
-import { Heading } from "@chakra-ui/react";
-import { Routes } from "./routes";
+import { BrowserRouter } from 'react-router-dom';
+import { AppProvider } from './contexts';
+import { Routes } from './routes';
 
-export const App = () => <Routes />;
+const App = () => (
+  <BrowserRouter>
+    <AppProvider>
+      <Routes />
+    </AppProvider>
+  </BrowserRouter>
+);
+
+export default App;
